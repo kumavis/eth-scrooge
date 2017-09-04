@@ -1,0 +1,22 @@
+{
+  "name": "eth-scrooge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.5",
+    "eth-contract-metadata": "^1.1.5",
+    "eth-query": "^2.1.0",
+    "eth-store": "^2.2.0",
+    "ethereumjs-tx": "^1.2.5",
+    "ethereumjs-util": "^5.1.2",
+    "ethjs-provider-http": "^0.1.6",
+    "request": "^2.79.0",
+    "treeify": "^1.0.1"
+  }
+}

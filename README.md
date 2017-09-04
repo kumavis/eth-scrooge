@@ -1,5 +1,7 @@
 ### eth-scrooge
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kumavis/eth-scrooge.svg)](https://greenkeeper.io/)
+
 cli tool for counting eth and token balances.
 
 supported tokens are currently limited -- needs mapping to coinmarketcap name

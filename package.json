@@ -12,7 +12,7 @@
     "async": "^2.1.5",
     "eth-contract-metadata": "^1.1.5",
     "eth-query": "^2.1.0",
-    "eth-store": "^2.2.0",
+    "eth-store": "^3.2.1",
     "ethereumjs-tx": "^1.2.5",
     "ethereumjs-util": "^5.1.2",
     "ethjs-provider-http": "^0.1.6",

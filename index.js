@@ -43,6 +43,21 @@ const assets = {
     digits: 18,
     coinmarketcapName: 'augur',
   },
+  'OmiseGo': {
+    address: '0xd26114cd6EE289AccF82350c8d8487fedB8A0C07',
+    digits: 18,
+    coinmarketcapName: 'omisego',
+  },
+  'Storj': {
+    address: '0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac',
+    digits: 8,
+    coinmarketcapName: 'storj',
+  },
+  'RChain RHOC': {
+    address: '0x168296bb09e24a88805cb9c33356536b980d3fc5',
+    digits: 8,
+    coinmarketcapName: 'rchain',
+  },
 }
 
 let provider = new HttpProvider('https://mainnet.infura.io/')

@@ -15,7 +15,10 @@
     "eth-store": "^2.2.0",
     "ethereumjs-tx": "^1.2.5",
     "ethereumjs-util": "^5.1.2",
+    "ethjs-contract": "^0.1.9",
     "ethjs-provider-http": "^0.1.6",
+    "ethjs-query": "^0.3.2",
+    "human-standard-token-abi": "^1.0.2",
     "request": "^2.79.0",
     "treeify": "^1.0.1"
   }

@@ -24,19 +24,24 @@ example addresses shown here are mining pools
 
 ```
 exchange rates:
-├─ Golem: 0.287563
-├─ DGD: 62.2028
-├─ Augur REP: 20.9461
-├─ MKR: 242.771
-├─ SwarmCity: 1.6633
-├─ Pluton: 10.4951
-└─ ETH: 289.244
+├─ Golem: 1.12786
+├─ Augur REP: 73.4113
+├─ OmiseGo: 20.4293
+├─ ETH: 999.785
+├─ DGD: 189.55
+├─ Pluton: 28.5945
+├─ RChain RHOC: 2.07734
+├─ SwarmCity: 4.56053
+└─ Storj: 2.47611
 
 asset holdings (USD):
-├─ hot 0x52bc
-│  └─ ETH: 2271530.4062923593
-└─ cold 0x4bb9
-   └─ ETH: 69090.65305601721
+├─ Ethpool_2
+│  ├─ OmiseGo: 395.7775826260477
+│  └─ ETH: 241405.77816506397
+└─ Nanopool
+   ├─ OmiseGo: 9771.581257906182
+   └─ ETH: 11091722.666526875
 
-total usd: 2,340,621.06
+total usd: 11343295.80
+total usd: 11,343,295.80
 ```

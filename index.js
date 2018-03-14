@@ -31,11 +31,11 @@ const assets = {
     digits: 18,
     coinmarketcapName: 'digixdao',
   },
-  // 'MKR': {
-  //   address: '0xc66ea802717bfb9833400264dd12c2bceaa34a6d',
-  //   digits: 18,
-  //   coinmarketcapName: 'maker',
-  // },
+  'MKR': {
+    address: '0xc66ea802717bfb9833400264dd12c2bceaa34a6d',
+    digits: 18,
+    coinmarketcapName: 'maker',
+  },
   'Golem': {
     address: '0xa74476443119A942dE498590Fe1f2454d7D4aC0d',
     digits: 18,
@@ -63,7 +63,7 @@ const assets = {
   },
 }
 
-let provider = new HttpProvider('https://mainnet.infura.io/')
+let provider = new HttpProvider('https://mainnet.infura.io')
 const query = new EthQuery(provider)
 bindFns(query)
 
@@ -154,7 +154,7 @@ async function getTokenBalance(asset, accountAddress) {
 
   const [ balanceResult, decimalsResult ] = await Promise.all([
     contract.balanceOf(accountAddress),
-    contract.decimals(),
+    asset.digits ? [asset.digits] : contract.decimals(),
   ])
 
   const balance = balanceResult[0]

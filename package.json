@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.1.5",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
     "eth-contract-metadata": "^1.1.5",
     "eth-query": "^2.1.0",
     "eth-store": "^2.2.0",

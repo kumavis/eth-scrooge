@@ -7,6 +7,7 @@ const async = require('async')
 const ethUtil = require('ethereumjs-util')
 const request = require('request')
 const treeify = require('treeify')
+const createInfuraProvider = require('eth-json-rpc-infura/src/createProvider')
 const asTree = (obj) => treeify.asTree(obj, true)
 
 const accounts = require('./accounts.json')
@@ -63,7 +64,8 @@ const assets = {
   },
 }
 
-let provider = new HttpProvider('https://mainnet.infura.io')
+// let provider = new HttpProvider('https://mainnet.infura.io')
+const provider = createInfuraProvider()
 const query = new EthQuery(provider)
 bindFns(query)
 
@@ -170,22 +172,6 @@ async function getTokenBalance(asset, accountAddress) {
     return parseInt(bn.toString(16), 16)
   }
 
-  // const [ symbol, decimals ] = results
-  // if (symbol && decimals) {
-  //   console.log('SETTING SYMBOL AND DECIMALS', { symbol, decimals })
-  //   this.setState({ symbol: symbol[0], decimals: decimals[0].toString() })
-  // }
-  // request(`https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${asset.address}&address=${accountAddress}&tag=latest&apikey=YourApiKeyToken`, (err, res, body) => {
-  //   if (err) return cb(err)
-  //   let realTokenBalance
-  //   try {
-  //     const rawTokenBalance = parseInt(JSON.parse(body).result)
-  //     realTokenBalance = rawTokenBalance / Math.pow(10, asset.digits)
-  //   } catch (err) {
-  //     return cb(err)
-  //   }
-  //   cb(null, realTokenBalance)
-  // })
 }
 
 function bindFns(obj){
@@ -205,5 +191,6 @@ function eachKeyValue(obj, fn){
 }
 
 function numberWithCommas(num) {
+  if (typeof num === 'number') num = num.toFixed(2)
   return num.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }

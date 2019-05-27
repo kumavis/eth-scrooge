@@ -184,10 +184,13 @@ function bindFns(obj){
 }
 
 function eachKeyValue(obj, fn){
-  for (let key in obj) {
-    const val = obj[key]
-    fn(key, val)
-  }
+  Object.entries(obj)
+    .sort(sortByProp(0))
+    .forEach(([key, val]) => fn(key, val))
+}
+
+function sortByProp (key) {
+  return (a, b) => a[key] > b[key] ? 1 : -1
 }
 
 function numberWithCommas(num) {
